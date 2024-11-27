@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8fcf8"
+    tools:context=".contactanos">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="399dp"
+        android:layout_height="127dp"
+        android:background="#f8fcf8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/borde">
+
+        <!-- Primer ImageButton -->
+        <!-- Segundo ImageButton -->
+
+        <ImageButton
+            android:id="@+id/icon_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_sort_by_size" />
+
+        <Button
+            android:id="@+id/title"
+            android:layout_width="208dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.042" />
+
+        <ImageButton
+            android:id="@+id/icon_one"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/persona" />
+    </LinearLayout>
+
+
+        <!-- Contenedor de los elementos de la sección de contacto -->
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="696dp"
+        android:background="@drawable/fondo4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686">
+
+        <!-- Título de la sección de contacto -->
+        <TextView
+            android:id="@+id/contact_us_title"
+            android:layout_width="353dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Contáctanos"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contact_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="En Fresh Track, estamos comprometidos en ofrecerte el mejor servicio. Si tienes preguntas o necesitas asistencia, contáctanos. Puedes llamarnos o enviarnos un mensaje por WhatsApp a los siguientes números:\n\nSi prefieres por correo, llena los campos 'Describe el problema aquí' y 'Describe detalladamente el problema aquí' en nuestro formulario de contacto. ¡Estamos para ayudarte!"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <!-- Números de contacto -->
+        <TextView
+            android:id="@+id/contact_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="phone"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="onContactNumberClick"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="5611708704 | 5517782551"
+            android:textColor="@color/light_green"
+            android:textSize="16sp" />
+
+        <!-- Botón para enviar WhatsApp al primer número -->
+        <Button
+            android:id="@+id/btnWhatsApp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Enviar WhatsApp al 5611708704" />
+
+        <!-- Botón para enviar WhatsApp al segundo número -->
+        <Button
+            android:id="@+id/btnWhatsApp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Enviar WhatsApp al 5517782551" />
+
+        <!-- EditText para ingresar correo electrónico -->
+        <EditText
+            android:id="@+id/editTextProblema"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:hint="Describe el problema aquí"
+            android:inputType="text"
+            android:textSize="16sp" />
+
+        <!-- EditText para describir detalladamente el problema -->
+        <EditText
+            android:id="@+id/editTextDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginStart="16dp"
+            android:gravity="start|top"
+            android:hint="Describe detalladamente el problema aquí"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:textSize="16sp" />
+
+        <!-- Botón para enviar mensaje de contacto -->
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Enviar"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
